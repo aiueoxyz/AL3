@@ -20,7 +20,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 	// ゲームウィンドウの作成
 	win = WinApp::GetInstance();
-	win->CreateGameWindow(L"LE2D_06_クラモチ_シュンスケ_AL3");
+	win->CreateGameWindow(L"LE2D_06_クラモチ_シュンスケ_AL3_1_2");
 
 	// DirectX初期化処理
 	dxCommon = DirectXCommon::GetInstance();
