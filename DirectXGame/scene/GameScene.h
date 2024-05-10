@@ -7,6 +7,9 @@
 #include "Sprite.h"
 #include "ViewProjection.h"
 #include "WorldTransform.h"
+#include <Player.h>
+#include <vector>
+#include <DebugCamera.h>
 
 /// <summary>
 /// ゲームシーン
@@ -43,6 +46,24 @@ private: // メンバ変数
 	DirectXCommon* dxCommon_ = nullptr;
 	Input* input_ = nullptr;
 	Audio* audio_ = nullptr;
+	Player* player_ = nullptr;
+
+	// テクスチャハンドル
+	uint32_t textureHandle_ = 0;
+
+	// 3Dモデルデータ
+	Model* modelBlock_ = nullptr;
+
+	std::vector<std::vector<WorldTransform*>> worldTransformBlocks_;
+
+	// ビュープロジェクション
+	ViewProjection viewProjection_;
+
+	// デバッグカメラ有効
+	bool isDebugCameraActive_ = false;
+
+	// デバッグカメラ
+	DebugCamera* debugCamera_ = nullptr;
 
 	/// <summary>
 	/// ゲームシーン用
