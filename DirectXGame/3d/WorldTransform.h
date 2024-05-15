@@ -55,7 +55,7 @@ public:
 	/// <summary>
 	/// 行列を計算・転送する  
 	/// </summary>
-	void UpdateMatrix(Vector3 scale, Vector3 rotation, Vector3 translation);
+	void UpdateMatrix();
 
 private:
 	// 定数バッファ
