@@ -49,7 +49,7 @@ void GameScene::Initialize() {
 	// ブロックの生成
 	for (uint32_t i = 0; i < kNumBlockVirtical; i++) {
 		for (uint32_t j = 0; j < kNumBlockHorizontal; j++) {
-			if (i == 1) {
+			if ((i + j) % 2 == 0) {
 				continue;
 			}
 
@@ -71,9 +71,6 @@ void GameScene::Update() {
 			if (!worldTransformBlock) {
 				continue;
 			}
-
-			Matrix4x4 matWorld = MakeAffineMatrix(
-				worldTransformBlock->scale_, worldTransformBlock->rotation_, worldTransformBlock->translation_);
 
 			// アフィン変換と転送
 			worldTransformBlock->UpdateMatrix();
